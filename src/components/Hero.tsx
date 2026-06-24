@@ -51,19 +51,33 @@ export default function Hero() {
             Step into the future with a car that blends intelligent features, sleek design, and everything you need for the road ahead.
           </motion.p>
 
-          <motion.button
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="pointer-events-auto bg-primary hover:bg-primary-light text-white rounded-full py-4 px-10 flex items-center gap-4 font-semibold text-xl transition-all group shadow-[0_0_40px_rgba(204,0,0,0.5)]"
           >
-            Explore
-            <div className="bg-white text-primary rounded-full p-2 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform">
-              <ArrowUpRight size={20} />
-            </div>
-          </motion.button>
+            <motion.button
+              onClick={() => document.getElementById('models')?.scrollIntoView({ behavior: 'smooth' })}
+              animate={{ y: [0, -6, 0] }}
+              transition={{ 
+                duration: 2.5, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
+              }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="pointer-events-auto bg-primary hover:bg-primary-light text-white rounded-full py-3 px-8 flex items-center gap-3 font-semibold text-lg group"
+            >
+              Explore
+              <motion.div 
+                animate={{ x: [0, 4, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                className="bg-white text-primary rounded-full p-1.5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"
+              >
+                <ArrowUpRight size={18} />
+              </motion.div>
+            </motion.button>
+          </motion.div>
         </div>
       </div>
       
