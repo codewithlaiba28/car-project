@@ -15,7 +15,7 @@ export default function MoreThanCar() {
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.1, 1, 1.1]);
 
   return (
-    <section ref={containerRef} className="relative h-[80vh] w-full overflow-hidden flex items-center">
+    <section id="about" ref={containerRef} className="relative h-[80vh] w-full overflow-hidden flex items-center">
       <motion.div 
         className="absolute inset-0 z-0 w-full h-[140%] -top-[20%]"
         style={{ y, scale }}
