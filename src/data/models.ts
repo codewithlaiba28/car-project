@@ -39,7 +39,7 @@ export const models = [
     id: 4,
     name: 'AERO X2 Track',
     price: '$195,000',
-    image: '/model_car_1.png',
+    image: '/model_car_v4.png',
     specs: {
       zeroToHundred: '2.5s',
       hp: '850',
