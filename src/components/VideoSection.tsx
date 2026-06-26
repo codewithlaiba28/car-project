@@ -9,13 +9,13 @@ export default function VideoSection() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section className="py-24 bg-black relative">
-      <div className="container mx-auto px-6 md:px-12">
+    <section className="py-16 sm:py-20 md:py-24 bg-black relative">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden aspect-video border border-white/10 group cursor-pointer max-w-5xl mx-auto"
+          className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-video border border-white/10 group cursor-pointer max-w-5xl mx-auto"
           onClick={() => setIsPlaying(true)}
         >
           {!isPlaying ? (
@@ -30,9 +30,10 @@ export default function VideoSection() {
                 <motion.div 
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-24 h-24 bg-primary/90 backdrop-blur-sm rounded-full flex items-center justify-center text-white pl-2 shadow-[0_0_30px_rgba(204,0,0,0.4)]"
+                  className="w-16 h-16 sm:w-24 sm:h-24 bg-primary/90 backdrop-blur-sm rounded-full flex items-center justify-center text-white pl-1 sm:pl-2 shadow-[0_0_30px_rgba(204,0,0,0.4)]"
                 >
-                  <Play size={40} fill="currentColor" />
+                  <Play size={28} fill="currentColor" className="sm:hidden" />
+                  <Play size={40} fill="currentColor" className="hidden sm:block" />
                 </motion.div>
               </div>
             </>
