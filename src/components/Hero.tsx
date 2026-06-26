@@ -34,9 +34,9 @@ export default function Hero() {
       </div>
 
       {/* Content Overlay */}
-      <div className="container mx-auto px-6 md:px-12 relative z-10 pt-20 h-full flex flex-col justify-center pointer-events-none">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12 relative z-10 pt-16 sm:pt-20 h-full flex flex-col justify-center pointer-events-none">
         <div className="max-w-4xl">
-          <h1 className="text-7xl md:text-[10rem] font-bold tracking-tighter leading-none mb-6 drop-shadow-2xl font-heading flex overflow-hidden">
+          <h1 className="text-[3.5rem] xs:text-[4.5rem] sm:text-7xl md:text-[8rem] lg:text-[10rem] font-bold tracking-tighter leading-none mb-4 sm:mb-6 drop-shadow-2xl font-heading flex overflow-hidden">
             <motion.span custom={0} variants={titleVariants} initial="hidden" animate="visible" className="text-white">EM</motion.span>
             <motion.span custom={1} variants={titleVariants} initial="hidden" animate="visible" className="text-white">PO</motion.span>
             <motion.span custom={2} variants={titleVariants} initial="hidden" animate="visible" className="text-primary">WER</motion.span>
@@ -46,7 +46,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="text-gray-200 text-base md:text-lg max-w-xl mb-12 font-light leading-relaxed drop-shadow-md border-l-4 border-primary pl-6"
+            className="text-gray-200 text-sm sm:text-base md:text-lg max-w-xs sm:max-w-sm md:max-w-xl mb-8 sm:mb-12 font-light leading-relaxed drop-shadow-md border-l-4 border-primary pl-4 sm:pl-6"
           >
             Step into the future with a car that blends intelligent features, sleek design, and everything you need for the road ahead.
           </motion.p>
@@ -66,7 +66,7 @@ export default function Hero() {
               }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="pointer-events-auto bg-primary hover:bg-primary-light text-white rounded-full py-3 px-8 flex items-center gap-3 font-semibold text-lg group"
+              className="pointer-events-auto bg-primary hover:bg-primary-light text-white rounded-full py-2.5 sm:py-3 px-6 sm:px-8 flex items-center gap-2 sm:gap-3 font-semibold text-base sm:text-lg group"
             >
               Explore
               <motion.div 
@@ -74,7 +74,7 @@ export default function Hero() {
                 transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
                 className="bg-white text-primary rounded-full p-1.5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"
               >
-                <ArrowUpRight size={18} />
+                <ArrowUpRight size={16} />
               </motion.div>
             </motion.button>
           </motion.div>
