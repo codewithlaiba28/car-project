@@ -1,11 +1,11 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Hero() {
-  const titleVariants = {
+  const titleVariants: Variants = {
     hidden: { opacity: 0, y: 100 },
     visible: (i: number) => ({
       opacity: 1,
@@ -13,7 +13,7 @@ export default function Hero() {
       transition: {
         delay: i * 0.1,
         duration: 0.8,
-        ease: [0.2, 0.65, 0.3, 0.9],
+        ease: [0.2, 0.65, 0.3, 0.9] as [number, number, number, number],
       },
     }),
   };
