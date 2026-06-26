@@ -38,11 +38,12 @@ export default function Features() {
         .svg-draw-container svg rect {
           stroke-dasharray: 200;
           stroke-dashoffset: 200;
-          animation: drawSVG 3s ease-in-out infinite alternate;
+          animation: drawSVG 12s linear infinite;
         }
         @keyframes drawSVG {
           0% { stroke-dashoffset: 200; }
-          100% { stroke-dashoffset: 0; }
+          50% { stroke-dashoffset: 0; }
+          100% { stroke-dashoffset: -200; }
         }
       `}} />
       <div className="container mx-auto px-4 sm:px-6 md:px-12">
@@ -69,8 +70,12 @@ export default function Features() {
               className="bg-[#111] p-6 sm:p-8 rounded-2xl border border-white/5 hover:border-primary/50 transition-colors group"
             >
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary/20 transition-colors relative">
+                {/* Faint Static Icon Background */}
+                <div className="absolute inset-0 flex items-center justify-center w-full h-full opacity-20">
+                  {feature.icon}
+                </div>
                 {/* SVG Drawing Container */}
-                <div className="svg-draw-container flex items-center justify-center w-full h-full">
+                <div className="svg-draw-container flex items-center justify-center w-full h-full relative z-10">
                   {feature.icon}
                 </div>
               </div>
